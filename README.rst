@@ -20,7 +20,12 @@ Usage:
     $ docker build --build-arg HELM_VERSION=$HELM_VERSION -t gcr.io/$GCP_PROEJCT/helm:$HELM_VERSION
     $ docker push gcr.io/$GCP_PROEJCT/helm:$HELM_VERSION
 
-2. Run Helm from your ``cloudbuild.yaml`` file (if you created your own docker
+2. Ensure the CloudBuild service account has "Kubernetes Engine Admin" (visit
+   https://console.cloud.google.com/iam-admin/iam?project=YOUR_PROJECT, edit
+   the ``cloudbuild.gserviceaccount.com`` service account, add the "Kubernetes
+   Engine Admin" role)
+
+3. Run Helm from your ``cloudbuild.yaml`` file (if you created your own docker
    image in step 1, replace ``sx-ops-dev`` with your project name)::
 
     - name: 'gcr.io/sx-ops-dev/helm:v3.1.2'

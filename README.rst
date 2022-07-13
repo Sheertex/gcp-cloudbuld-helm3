@@ -15,7 +15,7 @@ Usage:
 
     $ git clone https://github.com/Sheertex/gcp-cloudbuld-helm3.git
     $ cd gcp-cloudbuld-helm3
-    $ export HELM_VERSION=v3.2.1
+    $ export HELM_VERSION=v3.9.0
     $ export GCP_PROEJCT=<your GCP project name>
     $ docker build --build-arg HELM_VERSION=$HELM_VERSION -t gcr.io/$GCP_PROEJCT/helm:$HELM_VERSION .
     $ docker push gcr.io/$GCP_PROEJCT/helm:$HELM_VERSION
@@ -28,7 +28,7 @@ Usage:
 3. Run Helm from your ``cloudbuild.yaml`` file (if you created your own docker
    image in step 1, replace ``sx-ops-dev`` with your project name)::
 
-    - name: 'gcr.io/sx-ops-dev/helm:v3.2.1'
+    - name: 'gcr.io/sx-ops-dev/helm:v3.9.0'
       args: [
          'upgrade',
          '--install',

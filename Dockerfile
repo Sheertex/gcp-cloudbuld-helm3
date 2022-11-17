@@ -1,6 +1,6 @@
 FROM gcr.io/google.com/cloudsdktool/cloud-sdk:alpine
 
-ARG HELM_VERSION=v3.9.0
+ARG HELM_VERSION=v3.10.0
 ENV HELM_VERSION=$HELM_VERSION
 
 RUN mkdir -p /builder/helm && \

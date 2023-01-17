@@ -16,10 +16,12 @@ Usage:
    Engine Admin" role)
 
 2. Run Helm from your ``cloudbuild.yaml`` file (if you created your own docker
-   image in step 1)::
+   image in step 1)
 
-  # Create helm docker image if it is missing. This should only need to run once for a project.
-  - name: 'gcr.io/cloud-builders/docker'
+ .. code-block:: text
+
+   # Create helm docker image if it is missing. This should only need to run once for a project.
+   - name: 'gcr.io/cloud-builders/docker'
     entrypoint: 'bash'
     args:
       - '-c'
